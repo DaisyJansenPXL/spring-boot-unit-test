@@ -49,7 +49,7 @@ public class ToDoControllerTest {
                 .andExpect(jsonPath("$.id").exists())
                 .andExpect(jsonPath("$.text").exists())
                 .andExpect(jsonPath("$.completed").exists())
-                .andExpect(jsonPath("$.id").value(3))
+                .andExpect(jsonPath("$.id").value(8))
                 .andExpect(jsonPath("$.text").value("Build the artifacts"))
                 .andExpect(jsonPath("$.completed").value(false))
                 .andDo(print());
