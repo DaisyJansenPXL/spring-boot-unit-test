@@ -71,7 +71,7 @@ public class ToDoControllerTest {
                 .andDo(print());
     }
 
-    //@Test
+    @Test
     public void verifyNullToDo() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/todo/6").accept(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.errorCode").value(400))
