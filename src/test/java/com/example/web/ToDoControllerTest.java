@@ -142,7 +142,7 @@ public class ToDoControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{ \"idd\": \"8\", \"text\" : \"New ToDo Sample\", \"completed\" : \"false\" }")
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.errorCode").value(400))
+                .andExpect(jsonPath("$.errorCode").value(404))
                 .andExpect(jsonPath("$.message").value("The request could not be understood by the server due to malformed syntax."))
                 .andDo(print());
     }
